@@ -9,7 +9,7 @@
     "build-icons": "svgo -f assets",
     "inspect": "bankai inspect index.js",
     "test": "standard && npm run test-deps",
-    "test-deps": "dependency-check . && dependency-check . --extra --no-dev"
+    "test-deps": "dependency-check . -i sheetify && dependency-check . --extra --no-dev -i sanitize.css"
   },
   "dependencies": {
     "choo": "^6.0.0-4",
