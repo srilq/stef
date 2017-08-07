@@ -1,9 +1,6 @@
-var css = require('sheetify')
 var html = require('choo/html')
 
 var TITLE = '404'
-
-css('../scss/error404.scss')
 
 module.exports = view
 

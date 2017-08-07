@@ -1,8 +1,8 @@
-$main-fontstack: 'Gothic 725 Bold';
+$main-fontstack: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
 $main-fontstack-body: $main-fontstack;
 $main-fontstack-heading: 'Gothic 725 Black';
 $main-fontstack-subheading: 'Gothic 725 Bold';
-$main-fontstack-button: $main-fontstack;
+$main-fontstack-button: $main-fontstack-subheading;
 
 @import 'mixins';
 @import 'fonts';
@@ -21,8 +21,6 @@ $main-fontstack-button: $main-fontstack;
 	overflow-y: auto; // Sanitize override
 }
 body {
-	font-size: 1.15rem;
-	line-height: 1.2;
 	height: 100%;
 }
 
@@ -38,7 +36,7 @@ p {
 	font-size: inherit;
 	font-family: inherit;
 
-	margin: 0.6em 0;
+	margin: 0.8em 0;
 }
 h1,
 h2,
@@ -111,10 +109,10 @@ th a {
 
 body {
 	color: #222;
-	background: #222;
+	background: #fff;
 }
 .page {
-	background: #222;
+	background: #fff;
 
 	padding: 3rem;
 	overflow-x: hidden;
@@ -235,7 +233,7 @@ body {
 	.ticker__list { animation: ticker__rot 24s linear infinite }
 
 }
-:root:not(.detect--mobile) .ticker__rot .ticker__list:hover { animation-play-state: paused }
+.ticker__rot .ticker__list:hover { animation-play-state: paused }
 @keyframes ticker__rot {
 	0% { left: -25% }
 	100% { left: -75% }

@@ -1,8 +1,10 @@
 var css = require('sheetify')
 var choo = require('choo')
 
-css('./scss/main.scss')
 css('sanitize.css')
+css('./scss/main.scss')
+css('./scss/home.scss')
+css('./scss/error404.scss')
 
 var app = choo()
 if (process.env.NODE_ENV !== 'production') {
