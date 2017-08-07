@@ -1,0 +1,14 @@
+@import 'mixins';
+
+body,
+.home.page {
+    background-color: #fff;
+}
+.home.page {
+    $background-size: 15px 15px;
+    @include retina-image('/assets/bg', $background-size, 'png');
+    background-size: $background-size;
+    background-position: top center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}

@@ -1,12 +1,14 @@
 var css = require('sheetify')
 var choo = require('choo')
 
+css('./scss/main.scss')
 css('sanitize.css')
 
 var app = choo()
 if (process.env.NODE_ENV !== 'production') {
   app.use(require('choo-devtools')())
   app.use(require('choo-log')())
+  app.use(require('choo-service-worker/clear')())
 }
 app.use(require('choo-service-worker')())
 
