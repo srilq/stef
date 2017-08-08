@@ -5,13 +5,15 @@
   "scripts": {
     "start": "NODE_ENV=production bankai start -j [ -g yo-yoify ] -c [ -u sheetify-sass -u sheetify-cssnext ] index.js -p 80",
     "dev": "NODE_ENV=development bankai start -j [ -g yo-yoify ] -c [ -u sheetify-sass -u sheetify-cssnext ] index.js -p 8080",
+    "build-all": "npm run build-icons && npm run build && npm run build-htmlfix",
     "build": "bankai build -j [ -g yo-yoify ] -c [ -u sheetify-sass -u sheetify-cssnext ] index.js",
+    "build-htmlfix": "rm ./dist/index.html && cp ./dist/200.html ./dist/index.html",
     "build-icons": "svgo -f assets",
     "inspect": "bankai inspect index.js",
     "test": "standard && npm run test-deps",
     "test-deps": "dependency-check . -i sheetify && dependency-check . --extra --no-dev -i sanitize.css -i sheetify-sass -i sheetify-cssnext -i yo-yoify",
     "publish": "git push && surge -p ./dist -d stef.sh",
-    "publish-test": "surge -p ./dist -d stef-test.surge.sh"
+    "publish-test": "npm run build-all && surge -p ./dist -d stef-test.surge.sh"
   },
   "dependencies": {
     "choo": "^6.0.0-4",
@@ -21,7 +23,7 @@
     "sanitize.css": "^5.0.0",
     "sheetify-cssnext": "1.0.7",
     "sheetify-sass": "^1.0.2",
-    "yo-yoify": "3.7.3"
+    "yo-yoify": "^3.7.3"
   },
   "devDependencies": {
     "bankai": "^9.0.0-1",
