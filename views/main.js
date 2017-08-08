@@ -57,7 +57,7 @@ function Ticker () {
 
   function tickerVideo (item) {
     return html`
-      <li class="ticker__item ticker__item--image"><a href="${item.url}"><div class="ticker__media ticker__media--image image"><img src="/assets/${item.id}.jpg"></div></a></li>
+      <li class="ticker__item ticker__item--image"><a href="${item.url}"><div class="ticker__media ticker__media--image image"><img src="/assets/${item.id}.jpg" /></div></a></li>
     `
   }
 }

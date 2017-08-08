@@ -230,8 +230,10 @@ body {
 .ticker__rot {
 	display: inline-block;
 
-	.ticker__list { animation: ticker__rot 24s linear infinite }
-
+	.ticker__list {
+		animation: ticker__rot 24s linear infinite;
+		transform: translate3d(0,0,0)
+	}
 }
 .ticker__rot .ticker__list:hover { animation-play-state: paused }
 @keyframes ticker__rot {
