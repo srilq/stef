@@ -3,8 +3,6 @@ var choo = require('choo')
 
 css('sanitize.css')
 css('./scss/main.scss')
-css('./scss/home.scss')
-css('./scss/error404.scss')
 
 var app = choo()
 if (process.env.NODE_ENV === 'development') {

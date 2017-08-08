@@ -8,6 +8,9 @@ $main-fontstack-button: $main-fontstack-subheading;
 @import 'fonts';
 @import 'animations';
 
+@import 'home';
+@import 'error404';
+
 *,
 ::before,
 ::after {
