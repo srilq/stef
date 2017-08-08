@@ -7,7 +7,7 @@ css('./scss/home.scss')
 css('./scss/error404.scss')
 
 var app = choo()
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV === 'development') {
   app.use(require('choo-devtools')())
   app.use(require('choo-log')())
   app.use(require('choo-service-worker/clear')())
