@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "NODE_ENV=production bankai start -j [ -g yo-yoify ] -c [ -u sheetify-sass -u sheetify-cssnext ] index.js -p 80",
     "dev": "NODE_ENV=development bankai start -j [ -g yo-yoify ] -c [ -u sheetify-sass -u sheetify-cssnext ] index.js -p 8080",
     "build": "npm run build-icons && npm run build-app && npm run build-staticfix",
     "build-app": "bankai build -j [ -g yo-yoify ] -c [ -u sheetify-sass -u sheetify-cssnext ] index.js",
