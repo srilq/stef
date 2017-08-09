@@ -1,12 +1,6 @@
-$main-fontstack: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
-$main-fontstack-body: $main-fontstack;
-$main-fontstack-heading: 'Gothic 725 Black';
-$main-fontstack-subheading: 'Gothic 725 Bold';
-$main-fontstack-button: $main-fontstack-subheading;
+$fontstack: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
 
 @import 'mixins';
-@import 'fonts';
-@import 'animations';
 
 @import 'home';
 @import 'error404';
@@ -19,7 +13,7 @@ $main-fontstack-button: $main-fontstack-subheading;
 :root {
 	height: 100%;
 
-	font-family: $main-fontstack-body;
+	font-family: $fontstack;
 
 	overflow-y: auto; // Sanitize override
 }
@@ -40,48 +34,6 @@ p {
 	font-family: inherit;
 
 	margin: 0.8em 0;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-style: italic;
-	text-align: inherit;
-}
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: $main-fontstack-subheading;
-}
-h1 {
-	font-size: 4.5rem;
-	font-family: $main-fontstack-heading;
-
-	margin-top: 1em;
-	margin-bottom: 0.5em;
-}
-h2 {
-	font-size: 2.4rem;
-
-	margin-top: 1em;
-	margin-bottom: 0.5em;
-}
-h3 {
-	font-size: 2rem;
-
-	margin-top: 0.8em;
-	margin-bottom: 0.6em;
-}
-h4,
-h5,
-h6 {
-	font-size: 1.6rem;
-
-	margin-top: 1em;
 }
 
 p a,
@@ -106,10 +58,6 @@ th a {
 	}
 }
 
-.no-js {
-	display: none !important;
-}
-
 body {
 	color: #222;
 	background: #fff;
@@ -126,13 +74,6 @@ body {
 	max-width: 50rem;
 	margin-right: auto;
 	margin-left: auto;
-}
-.note {
-	font-size: 0.9em;
-	font-style: italic;
-	text-transform: lowercase;
-	text-align: center;
-	&.fx-text-appear { animation-delay: 1.2s }
 }
 .image {
 
@@ -173,16 +114,6 @@ body {
 	.vjs-loading-spinner { display: none !important }
 }
 
-.clock { display: none }
-.cookies-policy { display: none }
-
-.fx-text-appear {
-	height: 1.15em;
-	overflow-y: hidden;
-	animation: text-appear 0.4s 0.2s cubic-bezier(0, 1, 1, 1) backwards;
-	box-sizing: border-box;
-}
-
 .item-box {
 	background: #FFF;
 
@@ -194,12 +125,6 @@ body {
 
 	h2:first-child { margin-top: 0.6em }
 	h3:first-child { margin-top: 0.4em }
-}
-
-.icon img {
-	height: 1.4em;
-	margin-top: -0.1em;
-	margin-right: 0.1em;
 }
 
 .ticker {
