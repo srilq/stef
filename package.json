@@ -10,22 +10,22 @@
     "build-icons": "svgo -f assets",
     "inspect": "bankai inspect index.js",
     "test": "standard && npm run test-deps",
-    "test-deps": "dependency-check . -i sheetify && dependency-check . --extra --no-dev -i sanitize.css -i sheetify-sass -i sheetify-cssnext -i yo-yoify",
+    "test-deps": "dependency-check . -i sheetify && dependency-check . --extra --no-dev -i sanitize.css -i sheetify-sass -i sheetify-cssnext",
     "publish": "git push && surge -p ./dist",
     "publish-test": "npm run build && surge -p ./dist -d stef-test.surge.sh"
   },
   "dependencies": {
-    "choo": "^6.0.0-4",
+    "choo": "^6.0.0",
     "choo-devtools": "^1.3.1",
     "choo-log": "^7.2.1",
-    "choo-service-worker": "^2.1.6",
+    "choo-service-worker": "^2.2.0",
     "sanitize.css": "^5.0.0",
     "sheetify-cssnext": "^1.0.7",
     "sheetify-sass": "^1.0.2"
   },
   "devDependencies": {
     "bankai": "^9.0.0-1",
-    "standard": "^10.0.2",
+    "standard": "^10.0.3",
     "svgo": "^0.7.2"
   }
 }
