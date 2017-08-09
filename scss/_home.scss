@@ -15,4 +15,5 @@
 }
 .home__intro-text {
     font-size: 1.4em;
+    @media screen and (max-width: 365px) { font-size: 1.2em }
 }
