@@ -11,7 +11,7 @@
     "inspect": "bankai inspect index.js",
     "test": "standard && npm run test-deps",
     "test-deps": "dependency-check . -i sheetify && dependency-check . --extra --no-dev -i sanitize.css -i sheetify-sass -i sheetify-cssnext -i yo-yoify",
-    "publish": "git push && surge -p ./dist",
+    "publish": "git push && surge -p ./dist && surge -p ./dist -d stef.surge.sh",
     "publish-test": "npm run build && surge -p ./dist -d stef-test.surge.sh"
   },
   "dependencies": {
