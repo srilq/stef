@@ -3,7 +3,7 @@
 .home.page {
     background-color: #fff;
     $background-size: 15px 15px;
-    @include retina-image('/assets/bg', $background-size, 'png');
+    @include retina-image($static-base + '/assets/bg', $background-size, 'png');
     background-size: $background-size;
     background-position: top center;
     background-repeat: repeat;

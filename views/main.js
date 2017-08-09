@@ -14,6 +14,10 @@ module.exports = view
 
 function view (state, emit) {
   if (state.title !== TITLE) emit(state.events.DOMTITLECHANGE, TITLE)
+  TICKER_ITEMS = TICKER_ITEMS.map(function (item) {
+    item.image = state.staticBase + '/assets/' + item.id + '.jpg'
+    return item
+  })
   return html`
     <body>
       <div class="home page">
@@ -57,7 +61,7 @@ function Ticker () {
 
   function tickerVideo (item) {
     return html`
-      <li class="ticker__item ticker__item--image"><a href="${item.url}"><div class="ticker__media ticker__media--image image"><img src="/assets/${item.id}.jpg" /></div></a></li>
+      <li class="ticker__item ticker__item--image"><a href="${item.url}"><div class="ticker__media ticker__media--image image"><img src="${item.image}"></div></a></li>
     `
   }
 }
