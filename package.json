@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=development bankai start -j [ -g yo-yoify ] -c [ -u sheetify-sass -u sheetify-cssnext ] index.js -p 8080",
+    "dev": "NODE_ENV=development bankai start -c [ -u sheetify-sass -u sheetify-cssnext ] index.js -p 8080",
     "build": "npm run build-icons && npm run build-app && npm run build-staticfix",
-    "build-app": "bankai build -j [ -g yo-yoify ] -c [ -u sheetify-sass -u sheetify-cssnext ] index.js",
+    "build-app": "NODE_ENV=production bankai build -c [ -u sheetify-sass -u sheetify-cssnext ] index.js",
     "build-staticfix": "rm ./dist/index.html || true && cp ./dist/200.html ./dist/index.html && rm ./dist/sw.js || true && cp ./sw.js ./dist/sw.js",
     "build-icons": "svgo -f assets",
     "inspect": "bankai inspect index.js",
@@ -20,9 +20,8 @@
     "choo-log": "^7.2.1",
     "choo-service-worker": "^2.1.6",
     "sanitize.css": "^5.0.0",
-    "sheetify-cssnext": "1.0.7",
-    "sheetify-sass": "^1.0.2",
-    "yo-yoify": "^3.7.3"
+    "sheetify-cssnext": "^1.0.7",
+    "sheetify-sass": "^1.0.2"
   },
   "devDependencies": {
     "bankai": "^9.0.0-1",
