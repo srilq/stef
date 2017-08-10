@@ -33,7 +33,7 @@ function Intro () {
     <div class="home__intro item-box">
       <div class="row">
         <p class="home__intro-text">${INTRO}</p>
-        <p>📮 <a href="mailto:srilq.me@gmail.com">srilq.me@gmail.com</a>
+        <p>📮 <a href="mailto:hi@stef.sh">hi@stef.sh</a>
         <br>📝 Please ask for my CV.
         <br>🌍 <a href="https://github.com/srilq">github.com/srilq</a>
         <br>🌍 <a href="https://gitlab.com/users/srilq/projects">gitlab.com/srilq</a></p>
