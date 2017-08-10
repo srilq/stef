@@ -6,7 +6,7 @@
     "dev": "NODE_ENV=development bankai start -c [ -u sheetify-sass -u sheetify-cssnext ] index.js -p 8080",
     "build": "npm run build-icons && npm run build-app && npm run build-staticfix",
     "build-app": "NODE_ENV=production bankai build -c [ -u sheetify-sass -u sheetify-cssnext ] index.js",
-    "build-staticfix": "rm ./dist/index.html || true && cp ./dist/200.html ./dist/index.html && rm ./dist/sw.js || true && cp ./sw.js ./dist/sw.js",
+    "build-staticfix": "rm ./dist/sw.js || true && cp ./sw.js ./dist/sw.js && rm ./dist/favicon.ico || true && cp ./favicon.ico ./dist/favicon.ico && rm ./dist/CNAME || true && cp ./CNAME ./dist/CNAME && rm ./dist/200.html || true && cp ./dist/index.html ./dist/200.html",
     "build-icons": "svgo -f assets",
     "inspect": "bankai inspect index.js",
     "test": "standard && npm run test-deps",
@@ -24,7 +24,7 @@
     "sheetify-sass": "^1.0.2"
   },
   "devDependencies": {
-    "bankai": "^9.0.0-1",
+    "bankai": "^8.1.1",
     "standard": "^10.0.3",
     "svgo": "^0.7.2"
   }
