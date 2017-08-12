@@ -38,13 +38,24 @@ function Intro () {
     <div class="home__intro item-box">
       <div class="row">
         <p class="home__intro-text">${INTRO}</p>
-        <p>📮 <a href="mailto:hi@stef.sh">hi@stef.sh</a>
-        <br>📝 Please ask for my CV.
-        <br>🌍 <a href="https://github.com/srilq">github.com/srilq</a>
-        <br>🌍 <a href="https://gitlab.com/users/srilq/projects">gitlab.com/srilq</a></p>
+        <p>
+          ${link('📮', 'hi@stef.sh', 'mailto:hi@stef.sh')}
+          <br>${link('📝', 'Please ask for my CV.')}
+          <br>${link('🌍', 'github.com/srilq', 'https://github.com/srilq')}
+          <br>${link('🌍', 'gitlab.com/srilq', 'https://gitlab.com/users/srilq/projects')}
+          <br>${link('🔎', 'Source', 'https://github.com/srilq/stef')}
+        </p>
       </div>
     </div>
   `
+
+  function link (pretext, text, url) {
+    var span = html`<span></span>`
+    span.innerHTML = pretext + '&nbsp;&nbsp;'
+    if (url) span.appendChild(html`<a href="${url}">${text}</a>`)
+    else span.appendChild(html`<span>${text}</span>`)
+    return span
+  }
 }
 
 function Ticker () {
