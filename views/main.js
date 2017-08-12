@@ -20,7 +20,7 @@ module.exports = view
 function view (state, emit) {
   if (state.title !== TITLE) emit(state.events.DOMTITLECHANGE, TITLE)
   TICKER = TICKER.map(function (item) {
-    item.image = state.staticBase + '/assets/' + item.id + '.jpg'
+    item.image = state.staticHost.base + '/assets/' + item.id + '.jpg'
     return item
   })
   return html`
