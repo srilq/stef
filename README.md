@@ -1,12 +1,9 @@
 # stef
 
-It's a website!
-
-Uses [choo](https://github.com/choojs/choo). Very cute.
-
-Built with [bankai](https://github.com/choojs/bankai).
-
-Static hosted on [surge.sh](https://surge.sh).
+ * it's a website
+ * uses [choo](https://github.com/choojs/choo). very cute.
+ * built with [bankai](https://github.com/choojs/bankai).
+ * static hosted on [surge.sh](https://surge.sh).
 
 ## What do do
 
