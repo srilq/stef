@@ -1,6 +1,6 @@
 # stef
 
-🚂 It's a website!
+It's a website!
 
 Uses [choo](https://github.com/choojs/choo). Very cute.
 
