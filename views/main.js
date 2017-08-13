@@ -61,20 +61,24 @@ function Intro () {
 function Ticker () {
   return html`
     <div class="home__ticker item-box">
-      <div class="ticker ticker--video">
+      <div class="ticker">
         <div class="ticker__wrapper">
           <div class="ticker__rot">
-            <ul class="ticker__list">${items(TICKER)}${items(TICKER)}</ul>
+            ${ul(TICKER)}
           </div>
         </div>
       </div>
     </div>
   `
 
-  function items (ticker) {
-    return ticker.map(item)
+  function ul (ticker) {
+    var ul = html`<ul class="ticker__list"></ul>`
+    var items = ticker.map(li)
+    items = items.concat(items.map(item => item.cloneNode(true)))
+    items.forEach(item => ul.appendChild(item))
+    return ul
 
-    function item (item) {
+    function li (item) {
       var li = html`<li class="ticker__item ticker__item--image"></li>`
       var imageContainer = li
       var image = html`<div class="ticker__media ticker__media--image image"><img src="${item.image}"></div>`
