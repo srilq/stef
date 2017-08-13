@@ -9,8 +9,7 @@
     "build-staticfix": "rm ./dist/sw.js || true && cp ./sw.js ./dist/sw.js && rm ./dist/favicon.ico || true && cp ./favicon.ico ./dist/favicon.ico && rm ./dist/CNAME || true && cp ./CNAME ./dist/CNAME && rm ./dist/200.html || true && cp ./dist/index.html ./dist/200.html",
     "build-icons": "svgo -f assets",
     "inspect": "bankai inspect index.js",
-    "test": "standard && npm run test-deps",
-    "test-deps": "dependency-check . -i sheetify && dependency-check . --extra --no-dev -i sanitize.css -i sheetify-sass -i sheetify-cssnext",
+    "test": "standard",
     "publish": "git push && surge -p ./dist",
     "publish-test": "npm run build && surge -p ./dist -d stef-test.surge.sh"
   },
