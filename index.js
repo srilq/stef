@@ -1,8 +1,8 @@
-var css = require('sheetify')
 var choo = require('choo')
+var css = require('sheetify')
 
 css('sanitize.css')
-css('./scss/main.scss')
+css('./scss/_index.scss')
 
 var app = choo()
 

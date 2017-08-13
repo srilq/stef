@@ -1,10 +1,4 @@
-$static-base: 'http://static.stef.sh';
-$fontstack: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
-
-@import 'mixins';
-
-@import 'home';
-@import 'error404';
+@import 'global';
 
 *,
 ::before,
@@ -13,9 +7,7 @@ $fontstack: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica
 }
 :root {
 	height: 100%;
-
 	font-family: $fontstack;
-
 	overflow-y: auto; // Sanitize override
 }
 body {
@@ -33,7 +25,6 @@ img {
 p {
 	font-size: inherit;
 	font-family: inherit;
-
 	margin: 0.8em 0;
 }
 
@@ -65,7 +56,6 @@ body {
 }
 .page {
 	background: #fff;
-
 	padding: 3rem;
 	overflow-x: hidden;
 	min-height: 100%;
@@ -117,13 +107,10 @@ body {
 
 .item-box {
 	background: #FFF;
-
 	padding: 1.5rem 2rem;
-
 	margin-bottom: 3rem;
 	&:last-child { margin-bottom: 0 }
 	display: block;
-
 	h2:first-child { margin-top: 0.6em }
 	h3:first-child { margin-top: 0.4em }
 }
@@ -146,7 +133,6 @@ body {
 	width: 50rem;
 	max-width: 80vw;
 	overflow: hidden;
-
 	margin-right: 1rem;
 	display: inline-block;
 }

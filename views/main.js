@@ -1,4 +1,5 @@
 var html = require('choo/html')
+var css = require('sheetify')
 
 var TITLE = 'stef'
 var INTRO = 'Stef is a 22yo computer science graduate (BSc), web developer, Unity developer and former marketing designer.'
@@ -15,6 +16,19 @@ var TICKER = [
     { id: 'cab2', url: 'https://github.com/srilq/taxi-game' }
 ]
 
+var main = css`
+  @import '../scss/global';
+  :host {
+    background-color: #fff;
+    $background-size: 15px 15px;
+    @include retina-image($static-base + '/assets/bg', $background-size, 'png');
+    background-size: $background-size;
+    background-position: top center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+  }
+`
+
 module.exports = view
 
 function view (state, emit) {
@@ -25,7 +39,7 @@ function view (state, emit) {
   })
   return html`
     <body>
-      <div class="home page">
+      <div class="page ${main}">
         ${Intro()}
         ${Ticker()}
       </div>
@@ -34,10 +48,21 @@ function view (state, emit) {
 }
 
 function Intro () {
+  var introBox = css`
+    :host {
+      font-size: 1.1em;
+
+      .intro {
+        font-size: 1.4em;
+        @media screen and (max-width: 365px) { font-size: 1.2em; }
+      }
+    }
+  `
+
   return html`
-    <div class="home__intro item-box">
+    <div class="item-box ${introBox}">
       <div class="row">
-        <p class="home__intro-text">${INTRO}</p>
+        <p class="intro">${INTRO}</p>
         <p>
           ${link('📮', 'hi@stef.sh', 'mailto:hi@stef.sh')}
           <br>${link('📝', 'Please ask for my CV.')}
@@ -60,7 +85,7 @@ function Intro () {
 
 function Ticker () {
   return html`
-    <div class="home__ticker item-box">
+    <div class="item-box">
       <div class="ticker">
         <div class="ticker__wrapper">
           <div class="ticker__rot">
