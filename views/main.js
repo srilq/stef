@@ -16,16 +16,12 @@ var TICKER = [
     { id: 'cab2', url: 'https://github.com/srilq/taxi-game' }
 ]
 
-var main = css`
+var body = css`
   @import '../scss/global';
   :host {
     background-color: #fff;
-    $background-size: 15px 15px;
-    @include retina-background($static-base + '/assets/bg', $background-size, 'png');
-    background-size: $background-size;
+    @include retina-background($static-base + '/assets/bg', 15px 15px, 'png');
     background-position: top center;
-    background-repeat: repeat;
-    background-attachment: fixed;
   }
 `
 
@@ -38,7 +34,7 @@ function view (state, emit) {
     return item
   })
   return html`
-    <body class="${main}">
+    <body class="${body}">
       ${Intro()}
       ${Ticker()}
     </body>
