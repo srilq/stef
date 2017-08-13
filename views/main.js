@@ -1,7 +1,7 @@
 var html = require('choo/html')
 
 var TITLE = 'stef'
-var INTRO = 'Stef is a 22yo computer science graduate (BSc), web developer and Unity developer, former designer for publications + marketing.'
+var INTRO = 'Stef is a 22yo computer science graduate (BSc), web developer, Unity developer and former marketing designer.'
 var TICKER = [
     { id: 'lifeisstrange', url: 'http://www.feralinteractive.com/en/games/lifeisstrange/' },
     { id: 'companyofheroes2', url: 'http://www.feralinteractive.com/en/games/companyofheroes2/' },
