@@ -10,7 +10,7 @@ var TICKER = [
     { id: 'legomarvelsavengers', url: 'http://www.feralinteractive.com/en/mac-games/legomarvelsavengers/' },
     { id: 'alienisolation', url: 'http://www.feralinteractive.com/en/games/alienisolation/' },
     { id: 'dirtrally', url: 'http://www.feralinteractive.com/en/linux-games/dirtrally/' },
-    { id: 'co600', url: 'https://github.com/srilq/co600-corpus' },
+    { id: 'co600', url: 'https://github.com/srilq/GP-Unity-Shockwaves' },
     { id: 'cab1' },
     { id: 'cab2' }
 ]
