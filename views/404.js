@@ -21,9 +21,7 @@ function view (state, emit) {
   if (state.title !== TITLE) emit(state.events.DOMTITLECHANGE, TITLE)
   return html`
     <body>
-      <div class="page">
-        <div class="${error404}">404</div>
-      </div>
+      <div class="${error404}">404</div>
     </body>
   `
 }

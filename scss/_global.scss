@@ -1,7 +1,7 @@
 $static-base: 'http://static.stef.sh';
 $fontstack: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
 
-@mixin retina-image($filename, $background-size, $extension: 'png', $retina-suffix: '@2x') {
+@mixin retina-background($filename, $background-size, $extension: 'png', $retina-suffix: '@2x') {
 	background-image: url("#{$filename}.#{$extension}");
 
 	$ratio: 1.3;

@@ -21,7 +21,7 @@ var main = css`
   :host {
     background-color: #fff;
     $background-size: 15px 15px;
-    @include retina-image($static-base + '/assets/bg', $background-size, 'png');
+    @include retina-background($static-base + '/assets/bg', $background-size, 'png');
     background-size: $background-size;
     background-position: top center;
     background-repeat: repeat;
@@ -34,15 +34,13 @@ module.exports = view
 function view (state, emit) {
   if (state.title !== TITLE) emit(state.events.DOMTITLECHANGE, TITLE)
   TICKER = TICKER.map(function (item) {
-    item.image = state.staticHost.base + '/assets/' + item.id + '.jpg'
+    item.imgsrc = state.staticHost.base + '/assets/' + item.id + '.jpg'
     return item
   })
   return html`
-    <body>
-      <div class="page ${main}">
-        ${Intro()}
-        ${Ticker()}
-      </div>
+    <body class="${main}">
+      ${Intro()}
+      ${Ticker()}
     </body>
   `
 }
@@ -84,34 +82,78 @@ function Intro () {
 }
 
 function Ticker () {
+  var ticker = css`
+    :host {
+      width: 30000px;
+      overflow-x: visible;
+      margin: 1rem 0;
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
+      li {
+        width: 50rem;
+        max-width: 80vw;
+        overflow: hidden;
+        margin-right: 1rem;
+        display: inline-block;
+      }
+      img {
+        width: 100%;
+        display: block;
+      }
+      .rotator {
+        display: inline-block;
+
+        ul {
+          animation: ticker-rotate 40s linear infinite;
+          transform: translate3d(0,0,0);
+        }
+      }
+      .rotator ul:hover { animation-play-state: paused; }
+      @media screen and (max-width: 600px) {
+        img {
+          min-width: 177.78%;
+          margin-left: -39%;
+        }
+        .rotator ul:hover { animation-play-state: running; }
+      }
+      @keyframes ticker-rotate {
+        0% { left: -25%; }
+        100% { left: -75%; }
+      }
+    }
+  `
+
   return html`
     <div class="item-box">
-      <div class="ticker">
-        <div class="ticker__wrapper">
-          <div class="ticker__rot">
-            ${ul(TICKER)}
-          </div>
+      <div class="${ticker}">
+        <div class="rotator">
+          ${ul(TICKER)}
         </div>
       </div>
     </div>
   `
 
   function ul (ticker) {
-    var ul = html`<ul class="ticker__list"></ul>`
+    var ul = html`<ul></ul>`
     var items = ticker.map(li)
     items = items.concat(items.map(item => item.cloneNode(true)))
     items.forEach(item => ul.appendChild(item))
     return ul
 
     function li (item) {
-      var li = html`<li class="ticker__item ticker__item--image"></li>`
-      var imageContainer = li
-      var image = html`<div class="ticker__media ticker__media--image image"><img src="${item.image}"></div>`
+      var li = html`<li></li>`
+      var imgParent = li
+      var img = html`<img src="${item.imgsrc}">`
       if (item.url) {
-        imageContainer = html`<a href="${item.url}"></a>`
-        li.appendChild(imageContainer)
+        imgParent = html`<a href="${item.url}"></a>`
+        li.appendChild(imgParent)
       }
-      imageContainer.appendChild(image)
+      imgParent.appendChild(img)
       return li
     }
   }

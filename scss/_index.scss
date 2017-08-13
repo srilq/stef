@@ -8,74 +8,40 @@
 :root {
 	height: 100%;
 	font-family: $fontstack;
-	overflow-y: auto; // Sanitize override
+	overflow-y: auto; // override sanitize
 }
 body {
-	height: 100%;
+	color: #222;
+	background: #fff;
+	padding: 3rem;
+	overflow-x: hidden;
+	box-sizing: border-box;
 }
-
 a:link,
 a:visited {
 	color: inherit;
-}
-
-img {
-	display: inline-block;
 }
 p {
 	font-size: inherit;
 	font-family: inherit;
 	margin: 0.8em 0;
 }
-
-p a,
-li a,
-figcaption a,
-td a,
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a,
-th a {
-
-	&:link,
-	&.link {
-		border-bottom-width: 0.135em;
-	}
-	&.icon,
-	*.image {
-		border-bottom-width: 0;
-	}
-}
-
-body {
-	color: #222;
-	background: #fff;
-}
-.page {
-	background: #fff;
-	padding: 3rem;
-	overflow-x: hidden;
-	min-height: 100%;
-	box-sizing: border-box;
+img {
+	display: inline-block;
 }
 .row {
 	max-width: 50rem;
 	margin-right: auto;
 	margin-left: auto;
 }
-.image {
-
-	a {
-		border-bottom-style: none;
-	}
-	img {
-		width: 100%;
-		display: block;
-	}
+.item-box {
+	background: #fff;
+	padding: 1.5rem 2rem;
+	margin-bottom: 3rem;
+	&:last-child { margin-bottom: 0; }
+	display: block;
 }
+/*
 .video {
 
 	div.video-js,
@@ -102,57 +68,6 @@ body {
 }
 .video-js.vjs-nogui {
 
-	.vjs-loading-spinner { display: none !important }
+	.vjs-loading-spinner { display: none !important; }
 }
-
-.item-box {
-	background: #FFF;
-	padding: 1.5rem 2rem;
-	margin-bottom: 3rem;
-	&:last-child { margin-bottom: 0 }
-	display: block;
-	h2:first-child { margin-top: 0.6em }
-	h3:first-child { margin-top: 0.4em }
-}
-
-.ticker {
-	overflow-x: visible;
-	margin: 1rem 0;
-}
-.ticker__wrapper {
-	width: 30000px;
-	margin: 0.5rem 0;
-}
-.ticker__list {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	position: relative;
-}
-.ticker__item {
-	width: 50rem;
-	max-width: 80vw;
-	overflow: hidden;
-	margin-right: 1rem;
-	display: inline-block;
-}
-.ticker__rot {
-	display: inline-block;
-
-	.ticker__list {
-		animation: ticker-rot 40s linear infinite;
-		transform: translate3d(0,0,0)
-	}
-}
-.ticker__rot .ticker__list:hover { animation-play-state: paused }
-@media screen and (max-width: 600px) {
-	.ticker__media {
-		min-width: 177.78%;
-		margin-left: -39%;
-	}
-	.ticker__rot .ticker__list:hover { animation-play-state: running }
-}
-@keyframes ticker-rot {
-	0% { left: -25% }
-	100% { left: -75% }
-}
+*/
