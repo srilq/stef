@@ -11,8 +11,8 @@ var TICKER = [
     { id: 'alienisolation', url: 'http://www.feralinteractive.com/en/games/alienisolation/' },
     { id: 'dirtrally', url: 'http://www.feralinteractive.com/en/linux-games/dirtrally/' },
     { id: 'co600', url: 'https://github.com/srilq/GP-Unity-Shockwaves' },
-    { id: 'cab1' },
-    { id: 'cab2' }
+    { id: 'cab1', url: 'https://github.com/srilq/taxi-game' },
+    { id: 'cab2', url: 'https://github.com/srilq/taxi-game' }
 ]
 
 module.exports = view
