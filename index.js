@@ -2,7 +2,7 @@ var choo = require('choo')
 var css = require('sheetify')
 
 css('sanitize.css')
-css('./scss/_index.scss')
+css('./assets/styles.css')
 
 var app = choo()
 

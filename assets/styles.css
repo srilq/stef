@@ -1,13 +1,11 @@
-@import 'global';
-
+:root {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	overflow-y: auto;
+}
 *,
 ::before,
 ::after {
 	box-sizing: initial;
-}
-:root {
-	font-family: $fontstack;
-	overflow-y: auto; // override sanitize
 }
 body {
 	color: #222;
@@ -35,38 +33,27 @@ img {
 }
 .item-box {
 	background: #fff;
-	padding: 1.5rem 2rem;
+	padding: 2rem;
 	margin-bottom: 3rem;
-	&:last-child { margin-bottom: 0; }
+
 	display: block;
 }
+.item-box:last-child { margin-bottom: 0; }
 /*
-.video {
-
-	div.video-js,
-	video:not(.vjs-tech) {
-		width: 100%;
-		display: block;
-	}
-}
 .video-js.vjs-scalable {
 	width: 100%;
 	height: auto;
-
-	&::before {
-		content: "";
-		padding-top: 56.25%;
-		width: 100%;
-		display: block;
-	}
 
 	.vjs-tech {
 		top: 0; right: 0; bottom: 0; left: 0;
 		position: absolute;
 	}
 }
-.video-js.vjs-nogui {
-
-	.vjs-loading-spinner { display: none !important; }
+.video-js.vjs-scalable::before {
+	content: "";
+	padding-top: 56.25%;
+	width: 100%;
+	display: block;
 }
+.video-js.vjs-nogui.vjs-loading-spinner { display: none !important; }
 */
