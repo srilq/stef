@@ -20,10 +20,10 @@ var items = [
 var body = css`
   :host {
     background-color: #fff;
-    background-image: url("/assets/bg.png");
-    background-image: -webkit-image-set(url("/assets/bg.png") 1x, url("/assets/bg@2x.png") 2x);
-    background-image: image-set(url("/assets/bg.png") 1x, url("/assets/bg@2x.png") 2x);
-    background-size: 15px;
+    background-image: url("/assets/bg4.png");
+    background-image: -webkit-image-set(url("/assets/bg4.png") 1x, url("/assets/bg4@2x.png") 2x);
+    background-image: image-set(url("/assets/bg4.png") 1x, url("/assets/bg4@2x.png") 2x);
+    background-size: 24px;
     background-position: top center;
   }
 `
