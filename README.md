@@ -1,12 +1,16 @@
 # stef
 
  * it's a website
- * uses [choo](https://github.com/choojs/choo). very cute.
- * built with [bankai](https://github.com/choojs/bankai).
- * static hosted on [surge.sh](https://surge.sh).
+ * uses [choo][choo]. very cute.
+ * built with [bankai][bankai].
+ * static hosted on [surge.sh][surge].
 
 ## What do do
 
 Run `npm install` and `npm run dev -- -o` to serve the site locally and open it in a browser.
 
 Run `npm run` to list all of the scripts in this boy.
+
+[choo]: https://github.com/choojs/choo "choo"
+[bankai]: https://github.com/choojs/bankai "bankai"
+[surge]: https://surge.sh "surge"
