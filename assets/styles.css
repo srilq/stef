@@ -10,7 +10,6 @@
 body {
 	color: #222;
 	background: #fff;
-	padding: 3rem;
 	overflow-x: hidden;
 	box-sizing: border-box;
 }
@@ -26,6 +25,10 @@ p {
 img {
 	display: inline-block;
 }
+
+body {
+	padding: 3rem;
+}
 .row {
 	max-width: 50rem;
 	margin-right: auto;
@@ -39,6 +42,11 @@ img {
 	display: block;
 }
 .item-box:last-child { margin-bottom: 0; }
+@media (max-width: 599px) {
+	body { padding: 2.2rem; }
+	.item-box { margin-bottom: 2.2rem; }
+}
+
 /*
 .video-js.vjs-scalable {
 	width: 100%;
