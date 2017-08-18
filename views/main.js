@@ -20,9 +20,9 @@ var items = [
 var body = css`
   :host {
     background-color: #fff;
-    background-image: url("/assets/bg5_32.png");
-    background-image: -webkit-image-set(url("/assets/bg5_32.png") 1x, url("/assets/bg5_32@2x.png") 2x);
-    background-image: image-set(url("/assets/bg5_32.png") 1x, url("/assets/bg5_32@2x.png") 2x);
+    background-image: url("http://static.stef.sh/assets/bg5_32.png");
+    background-image: -webkit-image-set(url("http://static.stef.sh/assets/bg5_32.png") 1x, url("http://static.stef.sh/assets/bg5_32@2x.png") 2x);
+    background-image: image-set(url("http://static.stef.sh/assets/bg5_32.png") 1x, url("http://static.stef.sh/assets/bg5_32@2x.png") 2x);
     background-size: 32px;
     background-position: top center;
   }
