@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === 'development') {
   app.use(require('choo-log')())
   app.use(require('choo-service-worker/clear')())
 }
-app.use(require('choo-service-worker')())
+// app.use(require('choo-service-worker')())
 
 app.use(staticHost)
 app.route('/', require('./views/main'))
