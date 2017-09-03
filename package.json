@@ -6,7 +6,7 @@
     "dev": "NODE_ENV=development bankai start -p 8080",
     "build": "npm run build-icons && npm run build-app && npm run build-staticfix",
     "build-app": "NODE_ENV=production bankai build",
-    "build-staticfix": "rm ./dist/sw.js || true && cp ./sw.js ./dist/sw.js && rm ./dist/favicon.ico || true && cp ./favicon.ico ./dist/favicon.ico && rm ./dist/CNAME || true && cp ./CNAME ./dist/CNAME && rm ./dist/200.html || true && cp ./dist/index.html ./dist/200.html",
+    "build-staticfix": "rm ./dist/sw.js || true && cp ./sw.js ./dist/sw.js && rm ./dist/favicon.ico || true && cp ./favicon.ico ./dist/favicon.ico && rm ./dist/CNAME || true && cp ./CNAME ./dist/CNAME && rm ./dist/200.html || true && cp ./dist/index.html ./dist/200.html && rm ./dist/.surgeignore || true && cp ./.surgeignore ./dist/.surgeignore",
     "build-icons": "svgo -f assets",
     "inspect": "bankai inspect",
     "test": "standard",
