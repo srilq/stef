@@ -2,8 +2,8 @@
   "name": "stef",
   "short_name": "stef",
   "start_url": "/",
-  "background_color": "#ffc0cb",
-  "theme_color": "#ffffff",
+  "background_color": "#ffc6ef",
+  "theme_color": "#ffc6ef",
   "icons": [{
     "src": "/assets/icon.png",
     "type": "image/png",

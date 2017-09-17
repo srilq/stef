@@ -32,7 +32,7 @@ module.exports = view
 
 function view (state, emit) {
   if (state.title !== title) emit(state.events.DOMTITLECHANGE, title)
-  items = items.map(function (item) {
+  items = items.map(item => {
     item.imgsrc = state.staticHost.base + '/assets/' + item.id + '.jpg'
     return item
   })
