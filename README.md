@@ -3,7 +3,7 @@
  * it's a website
  * uses [choo][choo]. very cute.
  * built with [bankai][bankai].
- * static hosted on [surge.sh][surge].
+ * static hosted on [netlify][netlify].
 
 ## What do do
 
@@ -13,4 +13,4 @@ Run `npm run` to list all of the scripts in this boy.
 
 [choo]: https://github.com/choojs/choo "choo"
 [bankai]: https://github.com/choojs/bankai "bankai"
-[surge]: https://surge.sh "surge"
+[netlify]: https://www.netlify.com/ "www.netlify.com"
