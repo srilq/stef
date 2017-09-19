@@ -5,16 +5,56 @@ var fs = require('fs')
 
 var title = 'stef'
 var items = [
-    { id: 'lifeisstrange', url: 'http://www.feralinteractive.com/en/games/lifeisstrange/' },
-    { id: 'companyofheroes2', url: 'http://www.feralinteractive.com/en/games/companyofheroes2/' },
-    { id: 'madmax', url: 'http://www.feralinteractive.com/en/games/madmax/' },
-    { id: 'winningsolutions', url: 'http://www.winningsolutions.co.uk' },
-    { id: 'legomarvelsavengers', url: 'http://www.feralinteractive.com/en/mac-games/legomarvelsavengers/' },
-    { id: 'alienisolation', url: 'http://www.feralinteractive.com/en/games/alienisolation/' },
-    { id: 'dirtrally', url: 'http://www.feralinteractive.com/en/linux-games/dirtrally/' },
-    { id: 'co600', url: 'https://github.com/srilq/GP-Unity-Shockwaves' },
-    { id: 'cab1', url: 'https://github.com/srilq/taxi-game' },
-    { id: 'cab2', url: 'https://github.com/srilq/taxi-game' }
+  {
+    id: 'lifeisstrange',
+    alt: 'Life Is Strange™ for Mac and Linux | Feral Interactive',
+    url: 'http://www.feralinteractive.com/en/games/lifeisstrange/'
+  },
+  {
+    id: 'companyofheroes2',
+    alt: 'Company of Heroes 2 for Mac and Linux | Feral Interactive',
+    url: 'http://www.feralinteractive.com/en/games/companyofheroes2/'
+  },
+  {
+    id: 'madmax',
+    alt: 'Mad Max for Mac and Linux | Feral Interactive',
+    url: 'http://www.feralinteractive.com/en/games/madmax/'
+  },
+  {
+    id: 'winningsolutions',
+    alt: 'Winning Solutions Ltd.',
+    url: 'http://www.winningsolutions.co.uk'
+  },
+  {
+    id: 'legomarvelsavengers',
+    alt: 'LEGO® Marvel\'s Avengers for Mac | Feral Interactive',
+    url: 'http://www.feralinteractive.com/en/mac-games/legomarvelsavengers/'
+  },
+  {
+    id: 'alienisolation',
+    alt: 'Alien: Isolation™ for Mac and Linux | Feral Interactive',
+    url: 'http://www.feralinteractive.com/en/games/alienisolation/'
+  },
+  {
+    id: 'dirtrally',
+    alt: 'DiRT Rally for Linux | Feral Interactive',
+    url: 'http://www.feralinteractive.com/en/linux-games/dirtrally/'
+  },
+  {
+    id: 'co600',
+    alt: 'https://github.com/srilq/GP-Unity-Shockwaves',
+    url: 'https://github.com/srilq/GP-Unity-Shockwaves'
+  },
+  {
+    id: 'cab1',
+    alt: 'https://github.com/srilq/taxi-game',
+    url: 'https://github.com/srilq/taxi-game'
+  },
+  {
+    id: 'cab2',
+    alt: 'https://github.com/srilq/taxi-game',
+    url: 'https://github.com/srilq/taxi-game'
+  }
 ]
 
 var body = css`
@@ -39,8 +79,10 @@ function view (state, emit) {
   var Ticker = require('./ticker')
   return html`
     <body class="${body}">
-      ${Intro(emit)}
-      ${Ticker(items, emit)}
+      <main role="main">
+        ${Intro(emit)}
+        ${Ticker(items, emit)}
+      </main>
     </body>
   `
 }

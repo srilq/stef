@@ -72,7 +72,7 @@ function Ticker (items, emit) {
     function li (item) {
       var li = html`<li></li>`
       var imgParent = li
-      var img = html`<img src="${item.imgsrc}">`
+      var img = html`<img alt="${item.alt}" src="${item.imgsrc}">`
       if (item.url) {
         imgParent = html`<a href="${item.url}"></a>`
         li.appendChild(imgParent)
