@@ -47,13 +47,11 @@ var items = [
   },
   {
     id: 'cab1',
-    alt: 'https://github.com/srilq/taxi-game',
-    url: 'https://github.com/srilq/taxi-game'
+    alt: 'https://github.com/srilq/taxi-game'
   },
   {
     id: 'cab2',
-    alt: 'https://github.com/srilq/taxi-game',
-    url: 'https://github.com/srilq/taxi-game'
+    alt: 'https://github.com/srilq/taxi-game'
   }
 ]
 
