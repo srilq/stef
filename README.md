@@ -3,7 +3,6 @@
  * it's a website
  * uses [choo][choo]. very cute.
  * built with [bankai][bankai].
- * static hosted on [netlify][netlify].
 
 ## What do do
 
