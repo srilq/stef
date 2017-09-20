@@ -103,10 +103,9 @@ function Intro (emit) {
         <p class="intro">${fs.readFileSync(path.join(__dirname, '../assets/intro.txt'), 'utf8')}</p>
         <p>
           ${item('📮', 'stef@srilq.email', 'mailto:stef@srilq.email')}<br>
-          ${item('📚', 'CV on stackoverflow.com', 'https://stackoverflow.com/story/srilq')}<br>
-          ${item('📝', 'Please ask for my full CV.')}<br>
           ${item('🌍', 'github.com/srilq', 'https://github.com/srilq')}<br>
-          ${item('🌍', 'gitlab.com/srilq', 'https://gitlab.com/users/srilq/projects')}<br>
+          ${item('📝', 'CV on stackoverflow.com', 'https://stackoverflow.com/story/srilq')}<br>
+          ${item('📚', 'Please ask for my full CV.')}<br>
           ${item('🔎', 'View source', 'https://github.com/srilq/stef')}
         </p>
       </div>
