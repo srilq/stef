@@ -13,4 +13,3 @@ Run `npm run` to list all of the scripts in this boy.
 
 [choo]: https://github.com/choojs/choo "choo"
 [bankai]: https://github.com/choojs/bankai "bankai"
-[netlify]: https://www.netlify.com/ "www.netlify.com"
