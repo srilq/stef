@@ -6,14 +6,12 @@ var fs = require('fs')
 var title = 'stef'
 var items = [
   {
-    id: 'lifeisstrange',
-    alt: 'Life Is Strange™ for Mac and Linux | Feral Interactive',
-    url: 'http://www.feralinteractive.com/en/games/lifeisstrange/'
+    id: 'cab1',
+    alt: 'https://github.com/srilq/taxi-game'
   },
   {
-    id: 'companyofheroes2',
-    alt: 'Company of Heroes 2 for Mac and Linux | Feral Interactive',
-    url: 'http://www.feralinteractive.com/en/games/companyofheroes2/'
+    id: 'cab2',
+    alt: 'https://github.com/srilq/taxi-game'
   },
   {
     id: 'madmax',
@@ -46,12 +44,14 @@ var items = [
     url: 'https://github.com/srilq/GP-Unity-Shockwaves'
   },
   {
-    id: 'cab1',
-    alt: 'https://github.com/srilq/taxi-game'
+    id: 'lifeisstrange',
+    alt: 'Life Is Strange™ for Mac and Linux | Feral Interactive',
+    url: 'http://www.feralinteractive.com/en/games/lifeisstrange/'
   },
   {
-    id: 'cab2',
-    alt: 'https://github.com/srilq/taxi-game'
+    id: 'companyofheroes2',
+    alt: 'Company of Heroes 2 for Mac and Linux | Feral Interactive',
+    url: 'http://www.feralinteractive.com/en/games/companyofheroes2/'
   }
 ]
 
