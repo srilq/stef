@@ -102,8 +102,6 @@ function Intro (emit) {
         <p>
           ${item('📮', 'stef@srilq.email', 'mailto:stef@srilq.email')}<br>
           ${item('🌍', 'github.com/srilq', 'https://github.com/srilq')}<br>
-          ${item('📝', 'CV on stackoverflow.com', 'https://stackoverflow.com/story/srilq')}<br>
-          ${item('📚', 'Please ask for my full CV.')}<br>
           ${item('🔎', 'View source', 'https://github.com/srilq/stef')}
         </p>
       </div>
