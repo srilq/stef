@@ -1,4 +1,4 @@
-var html = require('choo/html')
+var html = require('bel')
 var css = require('sheetify')
 
 var title = '404'
