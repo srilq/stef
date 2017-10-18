@@ -6,7 +6,7 @@
 
 ## What do do
 
-Run `npm install` and `npm run dev -- -o` to serve the site locally and open it in a browser.
+Run `npm install` and `npm run dev` to serve the site locally and open it in a browser.
 
 Run `npm run` to list all of the scripts in this boy.
 
