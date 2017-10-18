@@ -91,8 +91,8 @@ function Intro (emit) {
     :host {
       font-size: 1.1em;
     }
-    @media (min-width: 365px) {
-      :host .intro { font-size: 1.3em; }
+    :host .intro {
+      font-size: 1.3em;
     }
   `
 
