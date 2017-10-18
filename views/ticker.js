@@ -1,4 +1,4 @@
-var html = require('choo/html')
+var html = require('bel')
 var css = require('sheetify')
 
 module.exports = Ticker
@@ -63,22 +63,21 @@ function Ticker (items, emit) {
   `
 
   function ul (items) {
-    var ul = html`<ul></ul>`
     var lis = items.map(li)
-    lis = lis.concat(lis.map(item => item.cloneNode(true)))
-    lis.forEach(item => ul.appendChild(item))
+    lis = lis.concat(lis.map(item => {
+      return item.cloneNode ? item.cloneNode(true) : item
+    }))
+    var ul = html`<ul>${lis}</ul>`
     return ul
 
     function li (item) {
-      var li = html`<li></li>`
-      var imgParent = li
+      var li = content => html`<li>${content}</li>`
+      var imgParent = img => img // no parent
       var img = html`<img alt="${item.alt}" src="${item.imgsrc}">`
       if (item.url) {
-        imgParent = html`<a href="${item.url}"></a>`
-        li.appendChild(imgParent)
+        imgParent = img => html`<a href="${item.url}">${img}</a>`
       }
-      imgParent.appendChild(img)
-      return li
+      return li(imgParent(img))
     }
   }
 }

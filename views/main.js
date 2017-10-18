@@ -1,4 +1,5 @@
-var html = require('choo/html')
+var html = require('bel')
+var raw = require('bel/raw')
 var css = require('sheetify')
 var path = require('path')
 var fs = require('fs')
@@ -108,10 +109,11 @@ function Intro (emit) {
   `
 
   function item (char, text, url) {
-    var span = html`<span></span>`
-    span.innerHTML = char + '&nbsp;&nbsp;'
-    if (url) span.appendChild(html`<a href="${url}">${text}</a>`)
-    else span.appendChild(html`<span>${text}</span>`)
-    return span
+    return html`
+      <span>
+        ${raw(char + ' &nbsp; ')}
+        ${url ? html`<a href="${url}">${text}</a>` : text}
+      </span>
+    `
   }
 }
