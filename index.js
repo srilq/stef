@@ -2,7 +2,12 @@ var choo = require('choo')
 var css = require('sheetify')
 
 css('normalize.css')
-css('./assets/style.css')
+css`
+  a:link,
+  a:visited {
+    color: inherit;
+  }
+`
 
 var app = choo()
 
