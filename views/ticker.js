@@ -31,8 +31,8 @@ function Ticker (items, emit) {
       display: inline-block;
     }
     :host .rotator ul {
-      -webkit-animation: ticker-rotate 40s linear infinite;
-      animation: ticker-rotate 40s linear infinite;
+      -webkit-animation: ticker-rotate 60s linear infinite;
+      animation: ticker-rotate 60s linear infinite;
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
     }

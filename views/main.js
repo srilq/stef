@@ -8,11 +8,11 @@ var title = 'stef'
 var items = [
   {
     id: 'cab1',
-    alt: 'https://github.com/srilq/taxi-game'
+    alt: 'https://github.com/stefee/taxi-game'
   },
   {
     id: 'cab2',
-    alt: 'https://github.com/srilq/taxi-game'
+    alt: 'https://github.com/stefee/taxi-game'
   },
   {
     id: 'madmax',
@@ -41,8 +41,8 @@ var items = [
   },
   {
     id: 'co600',
-    alt: 'https://github.com/srilq/GP-Unity-Shockwaves',
-    url: 'https://github.com/srilq/GP-Unity-Shockwaves'
+    alt: 'https://github.com/stefee/GP-Unity-Shockwaves',
+    url: 'https://github.com/stefee/GP-Unity-Shockwaves'
   },
   {
     id: 'lifeisstrange',
@@ -102,8 +102,8 @@ function Intro (emit) {
         <p class="intro">${fs.readFileSync(path.join(__dirname, '../assets/intro.txt'), 'utf8')}</p>
         <p>
           ${item('📮', 'stef@srilq.email', 'mailto:stef@srilq.email')}<br>
-          ${item('🌍', 'github.com/srilq', 'https://github.com/srilq')}<br>
-          ${item('🔎', 'View source', 'https://github.com/srilq/stef')}
+          ${item('🌍', 'github.com/stefee', 'https://github.com/stefee')}<br>
+          ${item('🔎', 'View source', 'https://github.com/stefee/stef')}
         </p>
       </div>
     </div>
